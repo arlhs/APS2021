@@ -10,9 +10,9 @@ ll modIterative(ll a, ll n, ll m)
     ll ans = 1;
     while(n!=0){
         if(n%2!=0)
-            ans = ((ans)%m * (a)%m)%m;
+            ans = ((ans)%m * (a)%m)%m;  // when n is odd ans multiplied by a i.e., ans = ans*a
         
-        a = ((a)%m * (a)%m)%m;
+        a = ((a)%m * (a)%m)%m;  // everytime a = a*a
         n = n >> 1;
     }
 
