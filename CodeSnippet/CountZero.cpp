@@ -1,19 +1,10 @@
-int countZero(int n)
+ll countZeroBit(ll x)
     {
-        int x = n;
-        int count = 0;
+        ll count = 0;
         while(x){
-            x = x&(x-1);
-            count++;
-        }
-
-        int total=0;
-        x = n;
-
-        while(x){
+            if((x&1)==0)
+                count++;
             x = x>>1;
-            total++;
         }
-
-        return total - count;
+        return count;
     }
